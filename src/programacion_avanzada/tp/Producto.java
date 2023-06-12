@@ -6,7 +6,7 @@ public class Producto {
     private String nombre;
     private String descripcion;
     private LocalDate fechaAlta;
-    private Integer pesoKg;
+
     private Double precio;
     private static final Double minPrecio = 0.1;
 
@@ -44,13 +44,6 @@ public class Producto {
         this.fechaAlta = fechaAlta;
     }
 
-    public Integer getPesoKg() {
-        return pesoKg;
-    }
-
-    public void setPesoKg(Integer pesoKg) {
-        this.pesoKg = pesoKg;
-    }
 
     public Double getPrecio() {
         return precio;
