@@ -1,22 +1,34 @@
 package programacion_avanzada.tp;
 
 import java.time.LocalDate;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Carrito {
     private Vendedor vendedor;
     private Cliente cliente;
     private LocalDate fechaCompra;
-    private Producto producto[] = new Producto[10];
-    public Vendedor vendedor(){return vendedor;}
+    private List<Producto> productos;
+
+    public Carrito() {
+        productos = new ArrayList<>();
+    }
 
     public Vendedor getVendedor() {
         return vendedor;
     }
 
-    public Cliente cliente() {return cliente;}
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
 
-    public Cliente getCliente() {return cliente;}
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
     public LocalDate getFechaCompra() {
         return fechaCompra;
@@ -26,12 +38,13 @@ public class Carrito {
         this.fechaCompra = fechaCompra;
     }
 
-    public Producto[] getProducto() {
-        return producto;
+    public List<Producto> getProductos() {
+        return productos;
     }
 
-    public void setProducto(Producto[] producto) {
-        this.producto = producto;
+
+    public Iterable<? extends Producto> getProducto() {
+        return productos;
     }
 }
 
